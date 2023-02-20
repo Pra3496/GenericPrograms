@@ -8,7 +8,7 @@
             int iNo1, iNo2, iNo3;
             float fNo1,fNo2, fNo3;
             string sNo1, sNo2, sNo3;
-            FindMaxNumber maxnum = new FindMaxNumber();
+            
 
 
             while(flag)
@@ -32,7 +32,9 @@
                         Console.Write("\nEnter third Number : ");
                         iNo3 = Convert.ToInt32(Console.ReadLine());
 
-                        Console.WriteLine("\nMaximum Number is : " + maxnum.maxInteger(iNo1,iNo2,iNo3)+"\n");
+                        FindMaxNumber<int> maxnum = new FindMaxNumber<int>(iNo1, iNo2, iNo3);
+
+                        Console.WriteLine("\nMaximum Number is : " + maxnum.maxMethod()+"\n");
 
                         Console.WriteLine("------------------------------------------------");
                         Console.Write("Press any key......");
@@ -47,7 +49,9 @@
                         Console.Write("\nEnter third Number : ");
                         fNo3 = (float)Convert.ToDouble(Console.ReadLine());
 
-                        Console.WriteLine("\nMaximum Number is : " + maxnum.maxFloat(fNo1,fNo2,fNo3) + "\n");
+                        FindMaxNumber<float> maxfloat = new FindMaxNumber<float>(fNo1, fNo2, fNo3);
+
+                        Console.WriteLine("\nMaximum Number is : " + maxfloat.maxMethod()+"\n");
 
                         Console.WriteLine("------------------------------------------------");
                         Console.Write("Press any key......");
@@ -62,7 +66,9 @@
                         Console.Write("\nEnter third word : ");
                         sNo3 = Convert.ToString(Console.ReadLine());
 
-                        Console.WriteLine("\nMaximum Length of Word is : " + maxnum.maxString(sNo1, sNo2, sNo3) + "\n");
+                        FindMaxNumber<string> maxstring = new FindMaxNumber<string>(sNo1, sNo2, sNo3);
+
+                        Console.WriteLine("\nMaximum Length of Word is : " + maxstring.maxMethod() + "\n");
 
                         Console.WriteLine("------------------------------------------------");
                         Console.Write("Press any key......");

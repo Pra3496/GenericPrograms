@@ -6,60 +6,41 @@ using System.Threading.Tasks;
 
 namespace GenericPrograms
 {
-    internal class FindMaxNumber
+    public class FindMaxNumber<T> where T : IComparable
     {
 
-        public int maxInteger(int numOne, int numTwo, int numThree)
+        public T tNo1, tNo2, tNo3;
+
+        public FindMaxNumber(T tNo1, T tNo2, T tNo3) 
         {
-            if (numOne.CompareTo(numTwo) > 0 && numOne.CompareTo(numThree) > 0)
+            this.tNo1 = tNo1;
+            this.tNo2 = tNo2;
+            this.tNo3 = tNo3;
+        }
+        public T maxValue(T tNo1, T tNo2, T tNo3)
+        {
+
+            if ( (tNo1.CompareTo(tNo2) > 0 && tNo1.CompareTo(tNo3) > 0) || (tNo1.CompareTo(tNo2) >= 0 && tNo1.CompareTo(tNo3) > 0) || ( tNo1.CompareTo(tNo2) > 0 && tNo1.CompareTo(tNo3) > 0))
             {
-                return numOne;
+                return tNo1;
             }
-            if (numTwo.CompareTo(numOne) > 0 && numTwo.CompareTo(numThree) > 0)
+            if ( (tNo2.CompareTo(tNo1) > 0 && tNo2.CompareTo(tNo3) > 0 ) || ( tNo2.CompareTo(tNo1) >= 0 && tNo2.CompareTo(tNo3) > 0 ) || ( tNo2.CompareTo(tNo1) > 0 && tNo2.CompareTo(tNo3) >= 0))
             {
-                return numTwo;
+                return tNo2;
             }
-            if (numThree.CompareTo(numOne) > 0 && numThree.CompareTo(numTwo) > 0)
+            if ((tNo3.CompareTo(tNo1) > 0 && tNo3.CompareTo(tNo2) > 0) || (tNo3.CompareTo(tNo1) >= 0 && tNo3.CompareTo(tNo2) > 0) || (tNo3.CompareTo(tNo1) > 0 && tNo3.CompareTo(tNo2) >= 0))
             {
-                return numThree;
+                return tNo3;
             }
-            throw new Exception("numOne,numTwo,numThree are same");
+           
+            throw new Exception("Number one,Two and three are same");
+            
         }
 
-        public float maxFloat(double valueOne, double valueTwo, double valueThree)
+        public T maxMethod()
         {
-
-            if (valueOne.CompareTo(valueTwo) > 0 && valueOne.CompareTo(valueThree) > 0)
-            {
-                return (float)valueOne;
-            }
-            if (valueTwo.CompareTo(valueOne) > 0 && valueTwo.CompareTo(valueThree) > 0)
-            {
-                return (float)valueTwo;
-            }
-            if (valueThree.CompareTo(valueOne) > 0 && valueThree.CompareTo(valueTwo) > 0)
-            {
-                return (float)valueThree;
-            }
-            throw new Exception("valueOne,valueTwo,valueThree are same");
-        }
-
-        public string maxString(string nameOne, string nameTwo, string nameThree)
-        {
-
-            if ( (nameOne.CompareTo(nameTwo) > 0 && nameOne.CompareTo(nameThree) > 0) || (nameOne.CompareTo(nameTwo) >= 0 && nameOne.CompareTo(nameThree) > 0) || ( nameOne.CompareTo(nameTwo) > 0 && nameOne.CompareTo(nameThree) > 0))
-            {
-                return nameOne;
-            }
-            if ( (nameTwo.CompareTo(nameOne) > 0 && nameTwo.CompareTo(nameThree) > 0 ) || ( nameTwo.CompareTo(nameOne) >= 0 && nameTwo.CompareTo(nameThree) > 0 ) || ( nameTwo.CompareTo(nameOne) > 0 && nameTwo.CompareTo(nameThree) >= 0))
-            {
-                return nameTwo;
-            }
-            if ((nameThree.CompareTo(nameOne) > 0 && nameThree.CompareTo(nameTwo) > 0) || (nameThree.CompareTo(nameOne) >= 0 && nameThree.CompareTo(nameTwo) > 0) || (nameThree.CompareTo(nameOne) > 0 && nameThree.CompareTo(nameTwo) >= 0))
-            {
-                return nameThree;
-            }
-            throw new Exception("nameOne,nameTwo,nameThree are same");
+            T max = maxValue(this.tNo1, this.tNo2, this.tNo3);
+            return max;
         }
     }
 }
