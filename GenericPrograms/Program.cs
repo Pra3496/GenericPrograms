@@ -5,32 +5,48 @@
         static void Main(string[] args)
         {
             bool flag = true;
-            int num1, num2, num3 = 0;
+            int iNo1, iNo2, iNo3;
+            float fNo1,fNo2, fNo3;
             FindMaxNumber maxnum = new FindMaxNumber();
 
 
             while(flag)
             {
-                Console.WriteLine("\n====================================\n");
+                Console.WriteLine("\n=======================================\n");
                 Console.WriteLine("\tWell-Come To Maximum find\n");
                 Console.WriteLine("====================================\n");
-                Console.WriteLine("1 : Maximum Integer \n\n\t0 : To Exit\n");
+                Console.WriteLine("1 : Finding Maximum Integer Number \n2 : Finding Maximum Floating Point Number\n\n\t0 : To Exit\n");
                 Console.WriteLine("\n------------------------------------\n");
                 Console.Write("Enter the option : ");
                 int option = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("\n====================================\n");
+                Console.WriteLine("\n=======================================\n");
                 switch (option)
                 {
                     case 1:
-                        Console.WriteLine("\n----------{ Finding Maximum Number }-----------");
+                        Console.WriteLine("\n----------{ Finding Maximum Integer Number }-----------");
                         Console.Write("\nEnter first Number : ");
-                        num1= Convert.ToInt32(Console.ReadLine());
+                        iNo1= Convert.ToInt32(Console.ReadLine());
                         Console.Write("\nEnter second Number : ");
-                        num2 = Convert.ToInt32(Console.ReadLine());
+                        iNo2 = Convert.ToInt32(Console.ReadLine());
                         Console.Write("\nEnter third Number : ");
-                        num3 = Convert.ToInt32(Console.ReadLine());
+                        iNo3 = Convert.ToInt32(Console.ReadLine());
 
-                        Console.WriteLine("\nMaximum Number is : " + maxnum.maxInteger(num1,num2,num3)+"\n");
+                        Console.WriteLine("\nMaximum Number is : " + maxnum.maxInteger(iNo1,iNo2,iNo3)+"\n");
+
+                        Console.WriteLine("------------------------------------------------");
+                        Console.Write("Press any key......");
+                        Console.ReadLine();
+                        break;
+                    case 2:
+                        Console.WriteLine("\n----------{ Finding Maximum Floating Point Number }-----------");
+                        Console.Write("\nEnter first Number : ");
+                        fNo1 = (float)Convert.ToDouble(Console.ReadLine());
+                        Console.Write("\nEnter second Number : ");
+                        fNo2 = (float)Convert.ToDouble(Console.ReadLine());
+                        Console.Write("\nEnter third Number : ");
+                        fNo3 = (float)Convert.ToDouble(Console.ReadLine());
+
+                        Console.WriteLine("\nMaximum Number is : " + maxnum.maxFloat(fNo1,fNo2,fNo3) + "\n");
 
                         Console.WriteLine("------------------------------------------------");
                         Console.Write("Press any key......");
