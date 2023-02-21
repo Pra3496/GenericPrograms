@@ -38,7 +38,7 @@ namespace GenericPrograms
         {
             var max = MaxValue(this.value);
 
-            Console.WriteLine("Maximum value is "+max);
+            Console.WriteLine("\nMaximum value is "+max);
         }
     }
 }

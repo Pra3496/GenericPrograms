@@ -139,7 +139,6 @@ namespace FindUnitTest
 
             GenericMaximum<double> genArr = new GenericMaximum<double>(arr);
             double result = genArr.MaxMethod();
-
             Assert.AreEqual(9.5, result);
 
             Assert.Pass();
@@ -158,7 +157,7 @@ namespace FindUnitTest
 
             Assert.AreEqual("tony", result);
 
-            Assert.Pass();
+            //Assert.Pass();
 
         }
 

@@ -88,7 +88,6 @@
 
                         GenericMaximum<int> genArr = new GenericMaximum<int>(arr);
                         
-                        Console.WriteLine();
                         genArr.PrintMaxValue();
 
                         Console.WriteLine("------------------------------------------------");
