@@ -22,7 +22,18 @@ namespace FindUnitTest
 
         }
 
-        
+        [Test]
+        public void GinvenMaxSecondNum_WhenAnalysed_shouldReturnSecondMax()
+        {
+            int result = genInteger.maxValue(25, 57, 37);
+            Assert.AreEqual(57, result);
+            Assert.Pass();
+
+        }
+
+
+
+
 
 
 
@@ -37,7 +48,14 @@ namespace FindUnitTest
 
         }
 
-        
+        [Test]
+        public void GinvenMaxSecondNum_WhenAnalysed_shouldReturnSecondMaxDouble()
+        {
+            double result = genDouble.maxValue(45.35, 85.54, 77.65);
+            Assert.AreEqual(85.54, result);
+            Assert.Pass();
+
+        }
 
 
 
@@ -52,7 +70,15 @@ namespace FindUnitTest
 
         }
 
-        
+        [Test]
+        public void GinvenMaxSecondNum_WhenAnalysed_shouldReturnSecondMaxString()
+        {
+            string result = genString.maxValue("ton", "tony", "ton");
+            Assert.AreEqual("tony", result);
+            Assert.Pass();
+
+        }
+
 
     }
 }
