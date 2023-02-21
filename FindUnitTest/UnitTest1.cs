@@ -32,7 +32,14 @@ namespace FindUnitTest
         }
 
 
+        [Test]
+        public void GinvenMaxThirdNum_WhenAnalysed_shouldReturnThirdMax()
+        {
+            int result = genInteger.maxValue(21, 42, 89);
+            Assert.AreEqual(89, result);
+            Assert.Pass();
 
+        }
 
 
 
@@ -58,6 +65,18 @@ namespace FindUnitTest
         }
 
 
+        [Test]
+        public void GinvenMaxTThirdNum_WhenAnalysed_shouldReturnThirdMaxDouble()
+        {
+            double result = genDouble.maxValue(45.6, 112.54, 777.65);
+            Assert.AreEqual(777.65, result);
+            Assert.Pass();
+
+        }
+
+
+
+
 
         ///////////////////         Test Maximum String        ///////////////////////
 
@@ -75,6 +94,15 @@ namespace FindUnitTest
         {
             string result = genString.maxValue("ton", "tony", "ton");
             Assert.AreEqual("tony", result);
+            Assert.Pass();
+
+        }
+
+        [Test]
+        public void GinvenMaxTThirdNum_WhenAnalysed_shouldReturnThirdMaxString()
+        {
+            string result = genString.maxValue("rain", "rain", "rainy");
+            Assert.AreEqual("rainy", result);
             Assert.Pass();
 
         }
