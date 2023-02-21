@@ -1,6 +1,6 @@
 ﻿namespace GenericPrograms
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -32,9 +32,9 @@
                         Console.Write("\nEnter third Number : ");
                         iNo3 = Convert.ToInt32(Console.ReadLine());
 
-                        FindMaxNumber<int> maxnum = new FindMaxNumber<int>(iNo1, iNo2, iNo3);
+                        FindMaxNumber<int> maxnum = new FindMaxNumber<int>();
 
-                        Console.WriteLine("\nMaximum Number is : " + maxnum.maxMethod()+"\n");
+                        Console.WriteLine("\nMaximum Number is : " + maxnum.maxValue(iNo1, iNo2, iNo3) +"\n");
 
                         Console.WriteLine("------------------------------------------------");
                         Console.Write("Press any key......");
@@ -49,9 +49,9 @@
                         Console.Write("\nEnter third Number : ");
                         fNo3 = (float)Convert.ToDouble(Console.ReadLine());
 
-                        FindMaxNumber<float> maxfloat = new FindMaxNumber<float>(fNo1, fNo2, fNo3);
+                        FindMaxNumber<float> maxfloat = new FindMaxNumber<float>();
 
-                        Console.WriteLine("\nMaximum Number is : " + maxfloat.maxMethod()+"\n");
+                        Console.WriteLine("\nMaximum Number is : " + maxfloat.maxValue(fNo1, fNo2, fNo3) +"\n");
 
                         Console.WriteLine("------------------------------------------------");
                         Console.Write("Press any key......");
@@ -66,9 +66,9 @@
                         Console.Write("\nEnter third word : ");
                         sNo3 = Convert.ToString(Console.ReadLine());
 
-                        FindMaxNumber<string> maxstring = new FindMaxNumber<string>(sNo1, sNo2, sNo3);
+                        FindMaxNumber<string> maxstring = new FindMaxNumber<string>();
 
-                        Console.WriteLine("\nMaximum Length of Word is : " + maxstring.maxMethod() + "\n");
+                        Console.WriteLine("\nMaximum Length of Word is : " + maxstring.maxValue(sNo1,sNo2,sNo3) + "\n");
 
                         Console.WriteLine("------------------------------------------------");
                         Console.Write("Press any key......");

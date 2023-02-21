@@ -9,14 +9,7 @@ namespace GenericPrograms
     public class FindMaxNumber<T> where T : IComparable
     {
 
-        public T tNo1, tNo2, tNo3;
-
-        public FindMaxNumber(T tNo1, T tNo2, T tNo3) 
-        {
-            this.tNo1 = tNo1;
-            this.tNo2 = tNo2;
-            this.tNo3 = tNo3;
-        }
+        
         public T maxValue(T tNo1, T tNo2, T tNo3)
         {
 
@@ -33,14 +26,10 @@ namespace GenericPrograms
                 return tNo3;
             }
            
-            throw new Exception("Number one,Two and three are same");
+            throw new Exception("All are same");
             
         }
 
-        public T maxMethod()
-        {
-            T max = maxValue(this.tNo1, this.tNo2, this.tNo3);
-            return max;
-        }
+       
     }
 }
