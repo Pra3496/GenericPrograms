@@ -5,10 +5,11 @@
         static void Main(string[] args)
         {
             bool flag = true;
-            int iNo1, iNo2, iNo3;
+            int iNo1, iNo2, iNo3,iNo;
             float fNo1,fNo2, fNo3;
             string sNo1, sNo2, sNo3;
             
+
 
 
             while(flag)
@@ -69,6 +70,26 @@
                         FindMaxNumber<string> maxstring = new FindMaxNumber<string>();
 
                         Console.WriteLine("\nMaximum Length of Word is : " + maxstring.maxValue(sNo1,sNo2,sNo3) + "\n");
+
+                        Console.WriteLine("------------------------------------------------");
+                        Console.Write("Press any key......");
+                        Console.ReadLine();
+                        break;
+                    case 4:
+                        Console.WriteLine("\n----------{ Finding Maximum Word }-----------");
+                        Console.Write("\nEnter Number of element You Want To Add : ");
+                        iNo = Convert.ToInt32(Console.ReadLine());
+                        int[] arr = new int[iNo];
+                        for (int i = 0;i < arr.Length; i++)
+                        {
+                            Console.Write("\nEnter {0} : ",i+1);
+                            arr[i] = Convert.ToInt32(Console.ReadLine());    
+                        }
+
+                        GenericMaximum<int> genArr = new GenericMaximum<int>(arr);
+                        
+                        Console.WriteLine();
+                        genArr.PrintMaxValue();
 
                         Console.WriteLine("------------------------------------------------");
                         Console.Write("Press any key......");

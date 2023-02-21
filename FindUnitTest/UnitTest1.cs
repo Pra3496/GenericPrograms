@@ -9,6 +9,10 @@ namespace FindUnitTest
         FindMaxNumber<double> genDouble = new FindMaxNumber<double>();
         FindMaxNumber<string> genString = new FindMaxNumber<string>();
 
+        
+
+        
+
 
 
         ///////////////////        Test Maximum Integer        ///////////////////////
@@ -107,6 +111,56 @@ namespace FindUnitTest
 
         }
 
+
+        ///////////////////         Test Maximum Integer Array        ///////////////////////
+       
+
+        [Test]
+        public void GinvenMaxNumFromArray_WhenAnalysed_shouldReturnMaxInteger()
+        {
+            int[] arr = { 14, 56, 899, 45, 85 };
+
+            GenericMaximum<int> genArr = new GenericMaximum<int>(arr);
+            int result = genArr.MaxMethod();
+
+            Assert.AreEqual(899,result);
+
+            Assert.Pass();
+
+        }
+
+
+        ///////////////////         Test Maximum Double Array        ///////////////////////
+
+        [Test]
+        public void GinvenMaxNumFromArray_WhenAnalysed_shouldReturnMaxDouble()
+        {
+            double[] arr = { 1.4, 5.6, 8.99, 9.5, 8.5 };
+
+            GenericMaximum<double> genArr = new GenericMaximum<double>(arr);
+            double result = genArr.MaxMethod();
+
+            Assert.AreEqual(9.5, result);
+
+            Assert.Pass();
+
+        }
+
+        ///////////////////         Test Maximum String Array        ///////////////////////
+
+        [Test]
+        public void GinvenMaxNumFromArray_WhenAnalysed_shouldReturnMaxString()
+        {
+            string[] arr = { "ton","toniy","tony","to","antony" };
+
+            GenericMaximum<string> genArr = new GenericMaximum<string>(arr);
+            string result = genArr.MaxMethod();
+
+            Assert.AreEqual("tony", result);
+
+            Assert.Pass();
+
+        }
 
     }
 }

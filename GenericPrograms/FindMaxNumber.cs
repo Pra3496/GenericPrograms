@@ -8,7 +8,6 @@ namespace GenericPrograms
 {
     public class FindMaxNumber<T> where T : IComparable
     {
-
         
         public T maxValue(T tNo1, T tNo2, T tNo3)
         {
